@@ -9,7 +9,7 @@ const myDataBase = process.env.DB_NAME;
 const myCollection = process.env.DB_COLLECTION;
 
 // generate a collection of documents data (array of objects)
-const numberOfDocs = 500; // number of documents wanted in the collection
+const numberOfDocs = 20; // number of documents wanted in the collection
 console.log(`Generating ${numberOfDocs} randomized user profiles...`);
 const DOCS = createCollection(numberOfDocs);
 console.log(`DONE: array of (${DOCS.length}) objects ready to insert.\n`);
