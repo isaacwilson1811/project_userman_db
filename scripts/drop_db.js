@@ -1,10 +1,9 @@
 // required modules
-require('dotenv').config();
 const { MongoClient } = require('mongodb');
 
 // env vars
-const uri = process.env.DB_URI;
-const myDataBase = process.env.DB_NAME;
+const uri = process.env.DB_URI || 'mongodb://localhost:27017/';
+const myDataBase = process.env.DB_NAME || 'isaacs_project_db';
 
 // connect to database server and then drop the database
 deleteDB();
