@@ -12,10 +12,22 @@ html(lang="en")
         button Create New User
       table(style='width:100%', border='1')
         tr
-          th First Name
-          th Last Name
+          th First Name 
+            a(href="/users/sort/fname/dsc")
+              button Sort &#8595;
+            a(href="/users/sort/fname/asc")
+              button Sort &#8593;
+          th Last Name 
+            a(href="/users/sort/lname/dsc")
+              button Sort &#8595;
+            a(href="/users/sort/lname/asc")
+              button Sort &#8593;
           th Email
-          th Age
+          th Age 
+            a(href="/users/sort/age/dsc")
+              button Sort &#8595;
+            a(href="/users/sort/age/asc")
+              button Sort &#8593;
           th Edit User
           th Delete User
         each user in users
