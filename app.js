@@ -42,6 +42,32 @@ app.listen(PORT, () => {
 });
 
 // express http request and response
+
+// FIND FIRST NAME
+app.post('/findfname', (req, res) => {
+  let { firstName } = req.body;
+  UserModel.find({'firstName': firstName},(err, data) => {
+    if (data.length === 1){
+      res.render('userlist', {users: data});
+    } else {
+      res.render('userlist', {users: data});
+    }
+  });
+});
+
+// FIND LAST NAME
+app.post('/findlname', (req, res) => {
+  let { lastName } = req.body;
+  UserModel.find({'lastName': lastName},(err, data) => {
+    if (data.length === 1){
+      console.log(data);
+      res.render('userlist', {users: data});
+    } else {
+      res.render('userlist', {users: data});
+    }
+  });
+});
+
 // GET READ ALL USERS
 app.get('/users/all', (req, res) => {
   UserModel.find({},(err, data) => {
