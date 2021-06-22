@@ -37,7 +37,7 @@ Uses: express, mongodb, mongoose, and dotenv.
 
 ## Step 4.
 > ### Run this script to start the front end http server
-> ` `
+> `npm run start`
 
 ## Step 5.
 > ### Navigate to http://localhost:3000 in your web browser.
