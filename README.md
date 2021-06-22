@@ -1,6 +1,8 @@
 # Simple User Manager Express App Using Mongo DB
 Written in JavaScript for running in Node.JS.  
-Uses: mongodb, express, mongoose, and dotenv.
+Uses: mongodb, express, mongoose, and pug.
+It can connect and use atlas cluster if provided the correct env vars.
+I ignore the .env file in git, and use local fallbacks.
 
 ## Instructions for my instructors:
 
@@ -21,31 +23,18 @@ Uses: mongodb, express, mongoose, and dotenv.
 > `npm install`
 
 ## Step 2.
-> ### Create .env file:
-> #### This multiline bash command will do it.
-```
-cat >> .env <<EOL
-DB_URI=mongodb://localhost:27017/
-DB_NAME=isaacs_project_db
-DB_COLLECTION=users_collection
-EOL
-```
-> ### Modify the value of DB_URI if you need to for some reason.
-> `nano .env`
-
-## Step 3.
 > ### Run this script to generate and insert a collection of sample data.
 > `npm run seed`
 
-## Step 4.
+## Step 3.
 > ### Run this script to start the front end http server
 > `npm run start`
 
-## Step 5.
+## Step 4.
 > ### Navigate to http://localhost:3000 in your web browser.
 > ### Test out the features of the app.
 
-## Step 6.
+## Step 5.
 > ### When you are done testing... Run this cleanup script to drop the database.
 > #### (Check my code if you are worried about this script.)
 > `npm run cleanup`

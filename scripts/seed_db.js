@@ -1,12 +1,11 @@
 // required modules
-require('dotenv').config();
 const { MongoClient } = require('mongodb');
 const createCollection = require('./create_collection');
 
 // env vars
-const uri = process.env.DB_URI;
-const myDataBase = process.env.DB_NAME;
-const myCollection = process.env.DB_COLLECTION;
+const uri = process.env.DB_URI || 'mongodb://localhost:27017/';
+const myDataBase = process.env.DB_NAME || 'isaacs_project_db';
+const myCollection = process.env.DB_COLLECTION || 'users_collection';
 
 // generate a collection of documents data (array of objects)
 const numberOfDocs = 20; // number of documents wanted in the collection

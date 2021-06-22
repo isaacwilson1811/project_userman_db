@@ -1,5 +1,4 @@
 // required modules
-require('dotenv').config();
 const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
@@ -7,9 +6,9 @@ const { ObjectId } = require('mongodb');
 
 // env vars
 const PORT = process.env.PORT || 3000;
-const DB_HOST = process.env.DB_URI;
-const myDataBase = process.env.DB_NAME;
-const myCollection = process.env.DB_COLLECTION;
+const DB_HOST = process.env.DB_URI || 'mongodb://localhost:27017/';
+const myDataBase = process.env.DB_NAME || 'isaacs_project_db';
+const myCollection = process.env.DB_COLLECTION || 'users_collection';
 
 // mongoose client and socket connection
 mongoose.connect( DB_HOST+myDataBase, {useNewUrlParser:true, useUnifiedTopology:true} );
