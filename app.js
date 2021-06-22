@@ -83,7 +83,7 @@ app.post('/adduser', (req, res) => {
     if (err) {
       res.send(err);
     } else {
-      res.redirect('/');
+      res.redirect('/users/all');
     }
   });
 });
