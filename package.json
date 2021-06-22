@@ -4,10 +4,8 @@
   "description": "",
   "main": "backend/api.js",
   "scripts": {
-    "start_api": "node backend/api.js",
-    "start_frontend": "node frontend/index.js",
-    "test_api": "nodemon backend/api.js",
-    "test_frontend": "nodemon frontend/index.js"
+    "seed": "node scripts/seed_db.js",
+    "cleanup": "node scripts/drop_db.js"
   },
   "repository": {
     "type": "git",
@@ -21,8 +19,10 @@
   },
   "homepage": "https://github.com/isaacwilson1811/project_userman_db#readme",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "mongodb": "^3.6.9"
+    "mongodb": "^3.6.9",
+    "mongoose": "^5.12.14"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
