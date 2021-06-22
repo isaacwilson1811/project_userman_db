@@ -34,6 +34,7 @@ I ignore the .env file in git, and use local fallbacks.
 ## Step 4.
 > ### Navigate to http://localhost:3000 in your web browser.
 > ### Test out the features of the app.
+> ## click edit on any user to see the unique user id.
 
 ## Step 5.
 > ### When you are done testing... Run this cleanup script to drop the database.
