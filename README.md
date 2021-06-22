@@ -33,8 +33,7 @@ Uses: express, mongodb, mongoose, and dotenv.
 
 ## Step 3.
 > ### Run this script to generate and insert a collection of sample data.
-
-`npm run seed`
+> `npm run seed`
 
 ## Step 4.
 > ### Run this script to start the front end http server
@@ -48,8 +47,7 @@ Uses: express, mongodb, mongoose, and dotenv.
 ## Step 6.
 > ### When you are done testing... Run this cleanup script to drop the database.
 > #### (Check my code if you are worried about this script.)
-
-`npm run cleanup`
+> `npm run cleanup`
 
 ## Step Optional.
 > ### ___You Probably Already Know This Stuff___:
@@ -60,4 +58,5 @@ Uses: express, mongodb, mongoose, and dotenv.
 >> ### If you started a manual process. This will end it.
 >> `mongo admin --eval "db.shutdownServer()"`
 
-# Thank You! -Isaac.
+# Thank You!
+-Isaac.
