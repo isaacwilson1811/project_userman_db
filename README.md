@@ -23,13 +23,13 @@ Uses: mongodb, express, mongoose, and dotenv.
 ## Step 2.
 > ### Create .env file:
 > #### This multiline bash command will do it.
->```
+```
 cat >> .env <<EOL
 DB_URI=mongodb://localhost:27017/
 DB_NAME=isaacs_project_db
 DB_COLLECTION=users_collection
 EOL
->```
+```
 > ### Modify the value of DB_URI if you need to for some reason.
 > `nano .env`
 
