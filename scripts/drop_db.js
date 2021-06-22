@@ -5,19 +5,17 @@ const { MongoClient } = require('mongodb');
 // env vars
 const uri = process.env.DB_URI;
 const myDataBase = process.env.DB_NAME;
-// const myCollection = process.env.DB_COLLECTION;
 
-// connect to database and insert the documents
+// connect to database server and then drop the database
 deleteDB();
 
-// the connect/insert function
+// the function
 async function deleteDB() {
   const client = new MongoClient(uri,{useNewUrlParser: true, useUnifiedTopology: true});
   try {
     console.log('Attempting connection to database server...');
     await client.connect();
     const database = client.db(myDataBase);
-    // const collection = database.collection(myCollection);
     console.log(`Connected to ${uri}`);
     console.log(`dropping ${database.databaseName}\n`);
     const result = await database.dropDatabase();
