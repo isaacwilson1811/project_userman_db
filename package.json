@@ -2,9 +2,10 @@
   "name": "project_userman_db",
   "version": "1.0.0",
   "description": "",
-  "main": "backend/api.js",
+  "main": "app.js",
   "scripts": {
     "seed": "node scripts/seed_db.js",
+    "start": "node app.js",
     "cleanup": "node scripts/drop_db.js"
   },
   "repository": {
