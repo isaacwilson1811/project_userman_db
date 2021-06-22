@@ -8,8 +8,8 @@
     "seed_env": "node -r dotenv/config scripts/seed_db.js",
     "cleanup": "node scripts/drop_db.js",
     "cleanup_env": "node -r dotenv/config scripts/drop_db.js",
-    "start": "node app.js",
-    "start_env": "node -r dotenv/config app.js",
+    "start_local": "node app.js",
+    "start": "node -r dotenv/config app.js",
     "dev": "nodemon -r dotenv/config app.js"
   },
   "repository": {
