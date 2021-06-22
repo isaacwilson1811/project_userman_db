@@ -67,7 +67,7 @@ app.post('/updateuser/:id', (req, res) => {
     'email': email,
     'age': age
   }, (err,data) => {
-    res.redirect('/');
+    res.redirect('/users/all');
   });
 });
 
@@ -91,8 +91,8 @@ app.post('/adduser', (req, res) => {
 // GET DELETE USER
 app.get('/deleteuser/:id', (req, res) => {
   let query = {"_id":ObjectId(req.params.id)};
-  UserModel.remove(query,(err,data) => {
-    res.redirect('/');
+  UserModel.deleteOne(query,(err,data) => {
+    res.redirect('/users/all');
   });
 });
 
