@@ -96,6 +96,48 @@ app.get('/deleteuser/:id', (req, res) => {
   });
 });
 
+// SORTING FIRST NAME ASC
+app.get('/users/sort/fname/asc', (req,res) => {
+  UserModel.find({}, (err,data) => {
+    res.render('userlist', {users: data});
+  }).sort({firstName: -1});
+});
+
+// SORTING FIRST NAME DSC
+app.get('/users/sort/fname/dsc', (req,res) => {
+  UserModel.find({}, (err,data) => {
+    res.render('userlist', {users: data});
+  }).sort({firstName: 1});
+});
+
+// SORTING LAST NAME ASC
+app.get('/users/sort/lname/asc', (req,res) => {
+  UserModel.find({}, (err,data) => {
+    res.render('userlist', {users: data});
+  }).sort({lastName: -1});
+});
+
+// SORTING LAST NAME DSC
+app.get('/users/sort/lname/dsc', (req,res) => {
+  UserModel.find({}, (err,data) => {
+    res.render('userlist', {users: data});
+  }).sort({lastName: 1});
+});
+
+// SORTING LAST AGE ASC
+app.get('/users/sort/age/asc', (req,res) => {
+  UserModel.find({}, (err,data) => {
+    res.render('userlist', {users: data});
+  }).sort({age: 1});
+});
+
+// SORTING LAST AGE DSC
+app.get('/users/sort/age/dsc', (req,res) => {
+  UserModel.find({}, (err,data) => {
+    res.render('userlist', {users: data});
+  }).sort({age: -1});
+});
+
 
 // everything CRUD seems to work
 // just make some nice rendered responses to know what happened instead of redirect to root
