@@ -46,11 +46,7 @@ app.listen(PORT, () => {
 app.post('/findfname', (req, res) => {
   let { firstName } = req.body;
   UserModel.find({'firstName': firstName},(err, data) => {
-    if (data.length === 1){
       res.render('userlist', {users: data});
-    } else {
-      res.render('userlist', {users: data});
-    }
   });
 });
 
@@ -58,12 +54,7 @@ app.post('/findfname', (req, res) => {
 app.post('/findlname', (req, res) => {
   let { lastName } = req.body;
   UserModel.find({'lastName': lastName},(err, data) => {
-    if (data.length === 1){
-      console.log(data);
       res.render('userlist', {users: data});
-    } else {
-      res.render('userlist', {users: data});
-    }
   });
 });
 
