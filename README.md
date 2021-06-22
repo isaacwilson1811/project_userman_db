@@ -25,6 +25,7 @@ I ignore the .env file in git, and use local fallbacks.
 ## Step 2.
 > ### Run this script to generate and insert a collection of sample data.
 > `npm run seed`
+> #### you can run this multiple times for even more data if you'd like.
 
 ## Step 3.
 > ### Run this script to start the front end http server
